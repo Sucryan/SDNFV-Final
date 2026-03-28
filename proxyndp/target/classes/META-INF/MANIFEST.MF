@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1766053182470
+Build-Jdk: 11.0.28
+Built-By: demo
+Bundle-Description: ONOS OSGi bundle archetype
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: proxyndp
+Bundle-SymbolicName: nycu.winlab.proxyndp
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: nycu.winlab.proxyndp;uses:="org.onosproject.cfg,org.onos
+ project.core,org.onosproject.net.device,org.onosproject.net.packet,org.
+ onosproject.net.topology";version="1.0.0"
+Import-Package: org.onlab.packet;version="[2.7,3)",org.onlab.packet.ipv6
+ ;version="[2.7,3)",org.onlab.packet.ndp;version="[2.7,3)",org.onosproje
+ ct.cfg;version="[2.7,3)",org.onosproject.core;version="[2.7,3)",org.ono
+ sproject.net;version="[2.7,3)",org.onosproject.net.device;version="[2.7
+ ,3)",org.onosproject.net.flow;version="[2.7,3)",org.onosproject.net.pac
+ ket;version="[2.7,3)",org.onosproject.net.topology;version="[2.7,3)",or
+ g.slf4j;version="[1.7,2)"
+Require-Capability: osgi.service;filter:="(objectClass=org.onosproject.c
+ fg.ComponentConfigService)";effective:=active,osgi.service;filter:="(ob
+ jectClass=org.onosproject.core.CoreService)";effective:=active,osgi.ser
+ vice;filter:="(objectClass=org.onosproject.net.device.DeviceService)";e
+ ffective:=active,osgi.service;filter:="(objectClass=org.onosproject.net
+ .packet.PacketService)";effective:=active,osgi.service;filter:="(object
+ Class=org.onosproject.net.topology.TopologyService)";effective:=active,
+ osgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.4.0)
+ (!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Service-Component: OSGI-INF/nycu.winlab.proxyndp.AppComponent.xml
+Tool: Bnd-4.1.0.201810181252
